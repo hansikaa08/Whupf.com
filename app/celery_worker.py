@@ -20,7 +20,11 @@ load_dotenv()
 
 
 # Queues using Redis
-app=Celery('tasks', broker='redis://localhost:6379/0')
+app = Celery(
+    'tasks',
+    broker='redis://red-c123456789:6379/0',  
+    backend='redis://red-c123456789:6379/0'
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
