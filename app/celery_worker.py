@@ -31,7 +31,7 @@ app.conf.task_max_retries = 3
 
 def send_email(to_email:str, subject:str, content:str):
     message=Mail(
-        from_email="saininihalhansika@gmail.com",
+        from_email="emailfrom@gmail.com",
         to_emails=to_email,
         subject=subject,
         html_content=content
@@ -83,13 +83,13 @@ def send_notification_task(self, notification_id: int):
 
         if notification.notification_type == "email":
             success = send_email(
-                to_email=f"nihalhansika08@gmail.com", 
+                to_email=f"emailto@gmail.com", 
                 subject="New Notification",
                 content=notification.message
             )
         elif notification.notification_type == "sms":
             success = send_sms(
-                to_phone="+91-9410511763", 
+                to_phone="+91-123456789", 
                 message=notification.message
             )
         else:  
