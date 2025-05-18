@@ -16,7 +16,7 @@ try:
 except Exception as e:
     print(f"Network error: {e}")
 
-load_dotenv()  # Loads .env file
+load_dotenv()
 
 
 # Queues using Redis
